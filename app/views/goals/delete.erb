@@ -1,0 +1,10 @@
+    <a style="float:right" href="/logout" class="btn btn-light btn-sm" >Log out</a>
+<form method="post" action="/goals/<%=@goal.id %>/delete">
+ <input type="hidden" name="_method" value="delete">
+ <input type="submit" class="btn btn-primary" value="Confirm Deletion">
+</form>
+
+<br>
+<form>
+  <input type="button" class="btn btn-primary" value="Go Back" onclick="history.back()">
+</form>

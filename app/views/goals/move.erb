@@ -1,0 +1,15 @@
+    <a style="float:right" href="/logout" class="btn btn-light btn-sm" >Log out</a>
+<h3>Please add the date visited.</h3>
+<i>Please do not leave any field blank. If you do not know yet, enter "TBD".</i> <br> <br>
+<form action="/goals/<%= @goal.id %>/move" method="post">
+       <input type="hidden" name="_method" value="patch">
+       City: <input type="text" name="city" value = "<%= @goal.city%>" ><br>
+       Country: <input type="text" name="country" value= "<%= @goal.country %>" ><br>
+       What You Did: <input type="text" name="tourist_attraction" value= "<%= @goal.tourist_attraction %>" ><br>
+       Date Visited: <input type="text" name="date_visited" value= "<%= @goal.date_visited %>" ><br><br>
+       <input type="submit" class="btn btn-primary value="Confirm Edit">
+    </form>
+<br>
+    <form>
+      <input type="button" class="btn btn-primary" value="Go Back" onclick="history.back()">
+    </form>

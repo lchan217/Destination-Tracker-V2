@@ -1,0 +1,33 @@
+    <a style="float:right" href="/logout" class="btn btn-light btn-sm" >Log out</a>
+<div class="text-center">
+  <h1>Welcome <%= @user.name%>! </h1>
+</div>
+
+<a href="/completions/new" class="btn btn-primary" role="button">Add a Past Trip</a>
+<a href="/goals/new" class="btn btn-primary" role="button">Add a Future Trip</a>
+
+<style>
+</style>
+<div class="row">
+  <div class="col">
+    <br>
+    <h2>Here are countries that you visited:</h2>
+      <% @user.completions.each do |completion| %>
+        <p>City: <%= completion.city %><br>
+        Country: <%= completion.country %><br>
+        What You Did: <%= completion.tourist_attraction %><br>
+        Date Visited: <%= completion.date_visited %><br>
+        <a href="/completions/<%=completion.id%>">More Details</a></p>
+      <% end %>
+  </div>
+  <div class="col">
+    <br>
+    <h2>Here are countries you want to visit: </h2>
+      <% @user.goals.each do |goal| %>
+        <p>City: <%= goal.city %><br>
+        Country: <%= goal.country %><br>
+        What You Want To Do: <%= goal.tourist_attraction %><br>
+        <a href="/goals/<%=goal.id%>">More Details</a></p>
+      <% end %>
+  </div>
+  </div>

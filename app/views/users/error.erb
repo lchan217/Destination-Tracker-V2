@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Uh oh! There seems to be an error. </h1>
+      Please see the error(s) below and try again:
+      <br>
+
+      <% @user.errors.full_messages.each do |error| %>
+          <ul>
+            <font color="red" size="2"><i>
+              <%=error%>
+            </i></font></ul>
+      <% end %>
+    <br>
+    <br>
+    <a href="/signup" class="btn btn-secondary btn-sm">Sign Up</a>
+    <a href="/login" class="btn btn-secondary btn-sm">Log In</a>
+</body>
+</html>
