@@ -19,3 +19,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/lchan2
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+##Link to Original Project
+https://github.com/lchan217/Project-2-Travel
